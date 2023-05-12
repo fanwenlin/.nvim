@@ -1,0 +1,5 @@
+return {
+  {
+    "autozimu/LanguageClient-neovim",
+  },
+}
