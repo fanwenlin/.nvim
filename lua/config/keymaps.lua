@@ -37,7 +37,7 @@ end
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
 -- Set Leader Key
-map({ "i", "n" }, "\\", "<Leader>", { desc = "Leader" })
+-- map({ "i", "n" }, "\\", "<Leader>", { desc = "Leader" })
 
 -- 将 gd 映射到跳转到定义
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
@@ -48,4 +48,6 @@ vim.api.nvim_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { no
 vim.api.nvim_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', 'ga', '<Cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<Leader>f', ':Ag! ""<left>', { noremap = true, silent = true })
 

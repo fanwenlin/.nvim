@@ -13,4 +13,7 @@ return {
       })
     end,
   },
+  {
+    "rking/ag.vim"
+  },
 }
