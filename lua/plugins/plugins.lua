@@ -16,4 +16,8 @@ return {
   {
     "rking/ag.vim"
   },
+  {
+    "codota/tabnine-nvim",
+    build = "./dl_binaries.sh",
+  }
 }

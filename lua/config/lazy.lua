@@ -26,7 +26,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = {"vscode", "momiji", "gruvbox",  "onedark", "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -44,3 +44,15 @@ require("lazy").setup({
     },
   },
 })
+
+require('tabnine').setup(
+  {
+    disable_auto_comment = true,
+    accept_keymap = "<Tab>",
+    dismiss_keymap = "<C-]>",
+    debounce_ms = 800,
+    suggestion_color = {gui = "#808080", cterm = 244},
+    exclude_filetypes = {"TelescopePrompt"},
+    log_file_path = nil,
+  }
+)

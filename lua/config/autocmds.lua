@@ -6,6 +6,10 @@ vim.g.LanguageClient_serverCommands = {
   go = { "gopls" },
 }
 
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+
+
+
 -- 在打开 Go 文件时，自动启动 LanguageClient-neovim
 -- vim.api.nvim_exec(
 --   [[
